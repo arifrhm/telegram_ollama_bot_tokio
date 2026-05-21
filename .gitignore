@@ -1,0 +1,43 @@
+# Rust
+/target
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+
+# Logs
+*.log
+
+# Docker
+docker-data/
+ollama_data/
+redis_data/
+
+# Rust analyzer
+.rustc_info.json
+
+# Coverage
+coverage/
+*.profraw
+
+# Temporary
+tmp/
+temp/
+
+# Build artifacts
+dist/
+build/
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3/target
