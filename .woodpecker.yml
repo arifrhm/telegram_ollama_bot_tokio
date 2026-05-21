@@ -1,0 +1,11 @@
+steps:
+  deploy:
+    image: docker:cli
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    commands:
+      - docker compose down
+      - docker compose up -d --build --remove-orphans
+      - docker image prune -f
