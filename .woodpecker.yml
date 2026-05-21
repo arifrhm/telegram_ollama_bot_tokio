@@ -5,10 +5,12 @@ steps:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
+    environment:
+      ENV_FILE_CONTENT:
+        from_secret: env_file_content
+
     commands:
+      - printf "%s" "$ENV_FILE_CONTENT" > .env
+      - cat .env
       - docker compose down
       - docker compose up -d --build --remove-orphans
-
-    when:
-      branch:
-        - main
